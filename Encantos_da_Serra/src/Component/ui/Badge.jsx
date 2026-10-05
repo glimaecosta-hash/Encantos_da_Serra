@@ -1,7 +1,9 @@
 export const Badge = ({ 
     children, 
     icon, 
+    variant ='default',
     className = '', ...rest }) => {
+        
 
         return (
             <span 
