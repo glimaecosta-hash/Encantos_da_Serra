@@ -2,7 +2,7 @@ export const Badge = ({
     children, 
     icon, 
     variant = 'default', // Variante padrão caso não seja informada
-  className = '', 
+    className = '', 
   ...rest 
 }) => {
   // 1. Estilos estruturais compartilhados (formato, espaçamento, tipografia)
@@ -29,7 +29,7 @@ export const Badge = ({
 
         return (
             <span 
-                className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium bg-gray-200 text-gray-800 ${className}`}
+                className={`${baseStyles} ${variantStyles[variant] } ${className}`}
                 {...rest}
             >
                 {icon && <span className="w-4 h-4">{icon}</span>}
